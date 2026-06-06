@@ -140,6 +140,17 @@
     { "id": 172, "category": "General Information", "question": "Do you provide a project contract or agreement?", "answer": "Yes, we provide agreements covering scope, timeline, and deliverables for professional projects." },
     { "id": 173, "category": "General Information", "question": "What happens if the project is delayed?", "answer": "We inform clients in advance in case of delays and ensure quality delivery remains the priority." },
     { "id": "Q92", "category": "General Information", "question": "Do you build websites for small businesses?", "answer": "Yes, we work with all sizes of businesses including startups, small local shops, and large enterprises." },
-    { "id": "Q110", "category": "General Information", "question": "Do you support long-term business partnerships?", "answer": "Yes, we prefer long-term partnerships for continuous development and support." }
+    { "id": "Q110", "category": "General Information", "question": "Do you support long-term business partnerships?", "answer": "Yes, we prefer long-term partnerships for continuous development and support." },
+    { "id": "site_1", "category": "General Information", "question": "When was DevCodex founded?", "answer": "DevCodex was founded in 2024 with the mission to bridge the gap between generic AI tools and deep enterprise needs." },
+    { "id": "site_2", "category": "General Information", "question": "What is DevCodex's mission?", "answer": "Our mission is to create human-centric AI that liberates human creativity rather than replacing it." },
+    { "id": "site_3", "category": "Web Development", "question": "What version of Next.js do you use?", "answer": "We use the latest technologies like Next.js 15 to ensure cutting-edge performance and SEO for all projects." },
+    { "id": "port_1", "category": "Custom Development", "question": "Can you tell me about FinFlow AI?", "answer": "FinFlow AI is one of our masterworks: an autonomous finance agent designed for automated bookkeeping and risk assessment." },
+    { "id": "port_2", "category": "Custom Development", "question": "What is EcoScale SaaS?", "answer": "EcoScale SaaS is a platform we developed for real-time carbon footprint tracking using a subscription-based model." },
+    { "id": "port_3", "category": "Custom Development", "question": "Do you have experience in healthcare tech?", "answer": "Yes, our project 'MediSync' is a healthcare interoperability platform that connects over 500 clinics." },
+    { "id": "port_4", "category": "Custom Development", "question": "Do you build AI customer support systems?", "answer": "Yes, 'OmniChat' is an example of our work—a multi-lingual customer support overhaul using intelligent agents." },
+    { "id": "ai_1", "category": "AI & Automation", "question": "What is DevCodex's AI capability?", "answer": "We provide the technical backbone for the next generation of enterprise, from deep AI research to production-ready software." },
+    { "id": "ai_2", "category": "AI & Automation", "question": "What kind of AI automation features do you offer?", "answer": "We offer Autonomous AI Agents (built on GPT-4o), Process Orchestration, Predictive Analytics, and Secure RAG Systems." },
+    { "id": "ai_3", "category": "AI & Automation", "question": "Are your AI systems secure?", "answer": "Yes, we build Secure RAG Systems that allow you to query internal knowledge bases without data leaks." }
+
   ]
 }
