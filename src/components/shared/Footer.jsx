@@ -107,9 +107,20 @@ export function Footer() {
               </li>
             </ul>
             <div className="flex space-x-4 pt-4">
-              {[FacebookIcon, YoutubeIcon, LinkedinIcon, InstagramIcon].map((Icon, i) => (
-                <Link key={i} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all">
-                  <Icon className="w-5 h-5" />
+              {[
+                { Icon: FacebookIcon, href: "https://www.facebook.com/share/1BKFbu6PR8/" },
+                { Icon: YoutubeIcon, href: "#" },
+                { Icon: LinkedinIcon, href: "https://www.linkedin.com/in/dev-codex/" },
+                { Icon: InstagramIcon, href: "https://www.instagram.com/devc_odex?igsh=MWo3enZoOGo3dXRnNQ==" }
+              ].map((social, i) => (
+                <Link 
+                  key={i} 
+                  href={social.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all"
+                >
+                  <social.Icon className="w-5 h-5" />
                 </Link>
               ))}
             </div>
