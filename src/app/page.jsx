@@ -127,7 +127,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden">
       <Navbar />
       
       {/* Hero Section */}
@@ -656,14 +656,6 @@ export default function Home() {
                     <div className="text-muted-foreground">+92 3239724377</div>
                   </div>
                 </div>
-              </div>
-
-              <div className="relative rounded-3xl overflow-hidden glass border-white/5 aspect-video shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" 
-                  alt="Consultation Space" 
-                  className="object-cover w-full h-full"
-                />
               </div>
             </div>
 

@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased text-white`}>
+      <body className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased text-white overflow-x-hidden`}>
         {children}
       </body>
     </html>
