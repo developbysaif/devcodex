@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DevCodex - Premium AI & Web Technology Agency
 
-## Getting Started
+DevCodex is a state-of-the-art digital agency website built with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**. It features a futuristic dark-mode aesthetic, glassmorphism UI elements, and an intelligent AI assistant powered by a structured knowledge base.
 
-First, run the development server:
+## 🚀 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Futuristic UI/UX**: Premium dark-mode design with glassmorphism, subtle animations, and high-quality 3D illustrations.
+- **Intelligent AI Assistant**: A custom-built chatbot integrated with a structured JSON knowledge base for context-aware customer support.
+- **Service Specializations**: Dedicated landing pages for AI Automation, Web Development, SEO, and eCommerce solutions.
+- **Portfolio Showcase**: Interactive project gallery with filtering and detailed case studies.
+- **Optimized Performance**: Built with Next.js App Router for superior speed and SEO.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technology Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 15
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Data Structuring**: Custom JSON Knowledge Base
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+- `src/app/`: Next.js App Router pages and layouts.
+- `src/components/`: Reusable UI components (shared, sections, ui).
+- `src/lib/`: Custom logic, metadata, and the AI knowledge base (`ai-data.json`).
+- `public/images/`: Custom high-fidelity 3D illustrations.
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Internal use for DevCodex Agency.
