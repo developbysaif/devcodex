@@ -1,89 +1,104 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Sparkles, Mail, Phone, MapPin } from "lucide-react";
-import { siteConfig } from "@/lib/metadata";
+import { Mail, Phone, MapPin, Cpu, Globe, Share2, MessageSquare, ExternalLink } from "lucide-react";
 
 const footerLinks = {
   Services: [
-    { name: "AI Automation", href: "/services/ai-automation" },
-    { name: "Web Development", href: "/services/web-development" },
-    { name: "SEO Optimization", href: "/services/on-page-seo" },
-    { name: "Digital Marketing", href: "/services/digital-marketing" },
+    { name: "Case Studies", href: "#portfolio" },
+    { name: "About", href: "#about" },
+    { name: "Blog", href: "#testimonials" },
+    { name: "Careers", href: "#contact" },
   ],
   Company: [
-    { name: "About Us", href: "/about" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Case Studies", href: "/case-studies" },
-    { name: "Blog", href: "/blog" },
-  ],
-  Support: [
-    { name: "Contact", href: "/contact" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "FAQ", href: "/faq" },
+    { name: "About", href: "#about" },
+    { name: "Blog", href: "#testimonials" },
+    { name: "Legal", href: "#home" },
   ],
 };
 
 export function Footer() {
   return (
-    <footer className="bg-background pt-20 pb-10 border-t border-border/50">
+    <footer className="bg-[#0A0F1E] pt-20 pb-10 border-t border-white/5">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center group mb-6">
-              <img
-                src="/images/logo_landscape.png"
-                alt="DevCodeX Logo"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Logo & Description */}
+          <div className="space-y-6">
+            <Link href="/" className="flex items-center group">
+              <img 
+                src="/images/logo_landscape.png" 
+                alt="DevCodex Logo" 
                 className="h-10 w-auto object-contain"
               />
             </Link>
-            <p className="text-muted-foreground text-lg mb-8 max-w-sm">
-              Empowering global enterprises with autonomous AI systems and
-              world-class digital products. Let's build the future together.
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-xs">
+              DevCodex accelerates your business web design and automate technology solutions worldwide.
             </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="p-3 bg-accent/30 rounded-full hover:bg-primary/20 transition-colors">
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" /></svg>
-              </Link>
-              <Link href="#" className="p-3 bg-accent/30 rounded-full hover:bg-primary/20 transition-colors">
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.295-1.552 3.3-1.23 3.3-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
-              </Link>
-              <Link href="#" className="p-3 bg-accent/30 rounded-full hover:bg-primary/20 transition-colors">
-                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-              </Link>
-            </div>
           </div>
 
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="font-heading font-bold text-lg mb-6">{title}</h4>
-              <ul className="space-y-4">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {/* Links Column 1 */}
+          <div>
+            <h4 className="font-bold text-xl mb-8 text-white">Services</h4>
+            <ul className="space-y-4 text-lg">
+              {footerLinks.Services.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-muted-foreground hover:text-brand-blue transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Links Column 2 */}
+          <div>
+            <h4 className="font-bold text-xl mb-8 text-white">Company</h4>
+            <ul className="space-y-4 text-lg">
+              {footerLinks.Company.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-muted-foreground hover:text-brand-blue transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <h4 className="font-bold text-xl mb-8 text-white">Contact Info</h4>
+            <ul className="space-y-6">
+              <li className="flex items-center space-x-4">
+                <div className="text-brand-blue"><Mail className="w-5 h-5" /></div>
+                <span className="text-muted-foreground text-lg">devcodex.agency@gmail.com</span>
+              </li>
+              <li className="flex items-center space-x-4">
+                <div className="text-brand-blue"><Phone className="w-5 h-5" /></div>
+                <span className="text-muted-foreground text-lg">+92 3239724377</span>
+              </li>
+              <li className="flex items-center space-x-4">
+                <div className="text-brand-blue"><MapPin className="w-5 h-5" /></div>
+                <span className="text-muted-foreground text-lg">Global Address DevCodex</span>
+              </li>
+            </ul>
+            <div className="flex space-x-4 pt-4">
+              {[MessageSquare, Globe, Share2, ExternalLink].map((Icon, i) => (
+                <Link key={i} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all">
+                  <Icon className="w-5 h-5" />
+                </Link>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
 
-        <div className="pt-10 border-t border-border/30 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} DevCodex.io. All rights reserved.
-          </p>
-          <div className="flex items-center space-x-8 text-sm text-muted-foreground">
+        <div className="pt-10 border-t border-white/5">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-muted-foreground text-sm font-medium">
             <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4" />
-              <span>hello@devcodex.io</span>
+              <span>Produced by</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-blue/40" />
+              <span>SaaS-agency</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>SF • London • Dubai</span>
-            </div>
+            <p>© {new Date().getFullYear()} DevCodex. All rights reserved.</p>
           </div>
         </div>
       </div>

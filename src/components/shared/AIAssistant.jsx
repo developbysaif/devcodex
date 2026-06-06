@@ -69,7 +69,7 @@ export function AIAssistant() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      content: `Hi! 👋 I'm the ${aiData.company_name} AI assistant. Ask me anything about our services — Web Development, WordPress, Shopify, SEO, Digital Marketing, or AI Automation!`,
+      content: `Hi! 👋 I'm the ${aiData.company_name} AI assistant. How can I help you today? Ask me anything about our services — Web Development, SEO, Digital Marketing, or AI Automation!`,
     },
   ]);
   const [input, setInput] = useState("");
@@ -230,24 +230,39 @@ export function AIAssistant() {
       </AnimatePresence>
 
       {/* Toggle Button */}
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        className="h-14 w-14 rounded-full shadow-2xl bg-gradient-to-br from-brand-blue to-brand-purple flex items-center justify-center text-white"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <AnimatePresence mode="wait">
-          {isOpen ? (
-            <motion.div key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }}>
-              <X className="w-6 h-6" />
-            </motion.div>
-          ) : (
-            <motion.div key="chat" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }}>
-              <MessageSquare className="w-6 h-6" />
+      <div className="flex flex-col items-end">
+        <AnimatePresence>
+          {!isOpen && (
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              className="mb-4 mr-2 bg-white text-black text-xs font-bold px-4 py-2 rounded-2xl shadow-xl border border-black/5 relative after:content-[''] after:absolute after:bottom-[-8px] after:right-[20px] after:border-l-[8px] after:border-l-transparent after:border-r-[8px] after:border-r-transparent after:border-t-[8px] after:border-t-white"
+            >
+              How can I help you?
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.button>
+        
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="h-14 w-14 rounded-full shadow-2xl bg-gradient-to-br from-brand-blue to-brand-purple flex items-center justify-center text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <AnimatePresence mode="wait">
+            {isOpen ? (
+              <motion.div key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }}>
+                <X className="w-6 h-6" />
+              </motion.div>
+            ) : (
+              <motion.div key="chat" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }}>
+                <MessageSquare className="w-6 h-6" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.button>
+      </div>
     </div>
   );
 }

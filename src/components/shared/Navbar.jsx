@@ -2,38 +2,17 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Sparkles, Code2, Globe, Search, BrainCircuit, Share2, Award, ShoppingBag } from "lucide-react";
+import { Menu, X, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
-const services = {
-  Development: [
-    { title: "Web Development", href: "/services/web-development", icon: Globe },
-    { title: "WordPress Development", href: "/services/wordpress-development", icon: Code2 },
-    { title: "Shopify Development", href: "/services/shopify-development", icon: ShoppingBag },
-    { title: "Front-End Development", href: "/services/frontend-development", icon: Code2 },
-    { title: "Back-End Development", href: "/services/backend-development", icon: Code2 },
-  ],
-  Marketing: [
-    { title: "On-Page SEO", href: "/services/on-page-seo", icon: Search },
-    { title: "Off-Page SEO", href: "/services/off-page-seo", icon: Search },
-    { title: "Digital Marketing", href: "/services/digital-marketing", icon: Share2 },
-    { title: "Social Media", href: "/services/social-media-marketing", icon: Share2 },
-    { title: "Brand Management", href: "/services/brand-management", icon: Award },
-  ],
-  AI: [
-    { title: "AI Automation", href: "/services/ai-automation", icon: BrainCircuit },
-    { title: "AI Integration", href: "/services/ai-integration", icon: BrainCircuit },
-  ]
-};
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "Services", href: "#services" },
+  { name: "Case Studies", href: "#portfolio" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
+];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,79 +26,63 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-white/5 py-4"
+          ? "bg-background/40 backdrop-blur-xl border-b border-white/5 py-4"
           : "bg-transparent py-8"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center group">
-          <img
-            src="/images/logo_landscape.png"
-            alt="DevCodeX Logo"
-            className="h-12 w-auto object-contain"
+        {/* Logo */}
+        <Link href="#home" className="flex items-center group animate-in fade-in slide-in-from-left duration-700">
+          <img 
+            src="/images/logo_landscape.png" 
+            alt="DevCodex Logo" 
+            className="h-10 md:h-14 w-auto object-contain hover:scale-105 transition-transform"
           />
         </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center space-x-10">
-          <NavigationMenu className="">
-            <NavigationMenuList className="">
-              <NavigationMenuItem className="">
-                <NavigationMenuTrigger className="bg-transparent hover:bg-white/5 text-lg font-medium h-auto px-4 py-2">
-                  Services
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="">
-                  <div className="grid grid-cols-3 gap-8 p-10 w-[900px] bg-card border border-white/10 rounded-3xl shadow-2xl">
-                    {Object.entries(services).map(([cat, items]) => (
-                      <div key={cat} className="space-y-6">
-                        <h4 className="text-xs font-bold uppercase tracking-widest text-brand-blue">{cat}</h4>
-                        <ul className="space-y-4">
-                          {items.map((item) => (
-                            <li key={item.title}>
-                              <Link
-                                href={item.href}
-                                className={cn(
-                                  "flex items-center space-x-3 group/item rounded-lg p-2 text-sm transition-all outline-none hover:bg-muted focus:bg-muted",
-                                  "in-data-[slot=navigation-menu-content]:rounded-md"
-                                )}
-                              >
-                                <div className="p-2 rounded-lg bg-white/5 text-muted-foreground group-hover/item:text-brand-blue group-hover/item:bg-brand-blue/10 transition-colors">
-                                  <item.icon className="w-5 h-5" />
-                                </div>
-                                <span className="text-base font-semibold text-muted-foreground group-hover/item:text-white transition-colors">{item.title}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-
-          {["Portfolio", "Case Studies", "Blog", "About"].map((item) => (
-            <Link key={item} href={`/${item.toLowerCase().replace(" ", "-")}`} className="text-lg font-medium text-muted-foreground hover:text-white transition-colors">
-              {item}
-            </Link>
-          ))}
+        {/* Desktop Nav - Capsule Style */}
+        <div className="hidden lg:flex items-center justify-center flex-1">
+          <div className="glass px-8 py-2.5 rounded-full border border-white/10 flex items-center space-x-8 shadow-2xl backdrop-blur-2xl">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name} 
+                href={link.href} 
+                className={cn(
+                  "text-base font-medium transition-all duration-300 relative group",
+                  link.name === "Home" ? "text-white" : "text-muted-foreground hover:text-white"
+                )}
+              >
+                {link.name}
+                {link.name === "Home" && (
+                  <motion.div 
+                    layoutId="nav-active"
+                    className="absolute -inset-x-4 -inset-y-2 bg-white/5 rounded-full -z-10"
+                  />
+                )}
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="hidden lg:flex items-center space-x-6">
+        {/* Right CTA */}
+        <div className="hidden lg:flex items-center">
           <Link
-            href="/contact"
+            href="#contact"
             className={cn(
-              "px-8 h-12 rounded-xl text-lg font-bold transition-all shadow-lg flex items-center justify-center",
-              "bg-brand-blue text-white hover:scale-105 shadow-brand-blue/20"
+              "px-8 h-12 rounded-xl text-base font-bold transition-all shadow-lg flex items-center justify-center",
+              "bg-brand-blue text-white hover:scale-105 shadow-brand-blue/30 active:scale-95"
             )}
           >
-            Get Consultation
+            Get A Proposal
           </Link>
         </div>
 
@@ -143,17 +106,23 @@ export function Navbar() {
           >
             <div className="container h-full flex flex-col p-8 pt-24">
               <div className="flex-1 space-y-8 overflow-y-auto">
-                <Link href="/services" className="text-3xl font-bold font-heading block">All Services</Link>
-                <Link href="/portfolio" className="text-3xl font-bold font-heading block">Portfolio</Link>
-                <Link href="/case-studies" className="text-3xl font-bold font-heading block">Case Studies</Link>
-                <Link href="/blog" className="text-3xl font-bold font-heading block">Blog</Link>
-                <Link href="/about" className="text-3xl font-bold font-heading block">About</Link>
-                <Link href="/contact" className="text-3xl font-bold font-heading block">Contact</Link>
+                {navLinks.map((link) => (
+                  <Link 
+                    key={link.name} 
+                    href={link.href} 
+                    onClick={handleLinkClick}
+                    className="text-4xl font-bold font-heading block hover:text-brand-blue transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
               </div>
               <div className="pt-8 space-y-4">
-                <Button className="w-full h-16 text-xl bg-brand-blue rounded-2xl font-bold">
-                  Get Free Consultation
-                </Button>
+                <Link href="#contact" onClick={handleLinkClick}>
+                  <Button className="w-full h-16 text-xl bg-brand-blue rounded-2xl font-bold">
+                    Get Free Consultation
+                  </Button>
+                </Link>
               </div>
             </div>
             <button
