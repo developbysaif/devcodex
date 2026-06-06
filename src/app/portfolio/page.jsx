@@ -15,21 +15,21 @@ const projects = [
     title: "FinFlow AI",
     category: "AI Automation",
     description: "Autonomous finance agent for automated bookkeeping and risk assessment.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    image: "/images/project-finflow.png",
     tags: ["Next.js", "GPT-4", "Stripe"],
   },
   {
     title: "EcoScale SaaS",
     category: "SaaS Development",
     description: "Subscription-based platform for tracking carbon footprint in real-time.",
-    image: "https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80&w=800",
+    image: "/images/project-ecoscale.png",
     tags: ["React", "PostgreSQL", "Cloudflare"],
   },
   {
     title: "MediSync",
     category: "Enterprise Solutions",
     description: "Healthcare interoperability platform connecting 500+ clinics.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800",
+    image: "/images/project-medisync.png",
     tags: ["Java", "AWS", "FHIR"],
   },
   {
@@ -66,7 +66,7 @@ export default function Portfolio() {
             <div className="relative">
               <div className="absolute -inset-4 bg-brand-blue/20 blur-3xl rounded-full opacity-50" />
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" 
+                src="/images/portfolio-header.png" 
                 alt="Portfolio Showcase" 
                 className="relative z-10 rounded-3xl border border-white/10 shadow-2xl w-full"
               />

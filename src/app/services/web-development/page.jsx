@@ -30,7 +30,7 @@ export default function WebDevelopment() {
             <div className="relative">
               <div className="absolute -inset-4 bg-brand-blue/20 blur-3xl rounded-full opacity-50" />
               <img 
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800" 
+                src="/images/web-development.png" 
                 alt="Web Development" 
                 className="relative z-10 rounded-3xl border border-white/10 shadow-2xl w-full"
               />

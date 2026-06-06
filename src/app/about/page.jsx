@@ -32,7 +32,7 @@ export default function About() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-brand-purple/20 blur-3xl rounded-full opacity-50" />
                 <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" 
+                  src="/images/about.png" 
                   alt="DevCodex Team" 
                   className="relative z-10 rounded-3xl border border-white/10 shadow-2xl w-full"
                 />
