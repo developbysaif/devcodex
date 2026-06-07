@@ -57,10 +57,10 @@ function getBestAnswer(userInput) {
 
 const QUICK_REPLIES = [
   "What services do you offer?",
+  "Tell me about your projects.",
   "How long does a website take?",
   "What is SEO?",
   "Do you build Shopify stores?",
-  "What is AI automation?",
   "How to contact you?",
 ];
 
