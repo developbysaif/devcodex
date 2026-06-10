@@ -1,40 +1,68 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 
 const techs = [
-    { name: 'HTML5', color: 'bg-orange-500' },
-    { name: 'CSS3', color: 'bg-blue-500' },
-    { name: 'Sass', color: 'bg-pink-500' },
-    { name: 'Tailwind CSS', color: 'bg-cyan-500' },
-    { name: 'Bootstrap', color: 'bg-purple-600' },
-    { name: 'JavaScript', color: 'bg-yellow-400' },
-    { name: 'React.js', color: 'bg-blue-400' },
-    { name: 'Next.js', color: 'bg-black' },
-    { name: 'Node.js', color: 'bg-green-600' },
-    { name: 'Express.js', color: 'bg-gray-700' },
-    { name: 'MongoDB', color: 'bg-green-500' },
-    { name: 'AWS', color: 'bg-orange-400' }
+    { name: 'HTML2', logo: 'https://cdn.simpleicons.org/html5/E34F26' },
+    { name: 'CSSS', logo: 'https://cdn.simpleicons.org/css3/1572B6' },
+    { name: 'SASS', logo: 'https://cdn.simpleicons.org/sass/CC6699' },
+    { name: 'Tailwind CSS', logo: 'https://cdn.simpleicons.org/tailwindcss/06B6D4' },
+    { name: 'Bootstrap', logo: 'https://cdn.simpleicons.org/bootstrap/7952B3' },
+    { name: 'JavaScript', logo: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
+    { name: 'React.js', logo: 'https://cdn.simpleicons.org/react/61DAFB' },
+    { name: 'Next.js', logo: 'https://cdn.simpleicons.org/nextdotjs/000000' },
+    { name: 'Node.js', logo: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+    { name: 'Express.js', logo: 'https://cdn.simpleicons.org/express/000000' },
+    { name: 'MangoDB', logo: 'https://cdn.simpleicons.org/mongodb/47A248' },
+    { name: 'AWS', logo: 'https://cdn.simpleicons.org/amazonaws/232F3E' }
 ];
 
 const Trust = () => {
-  return (
-    <section className="py-20 border-t border-white/5 bg-black/20">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-xl font-bold mb-12 text-center opacity-50 uppercase tracking-widest">Trust</h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          {techs.map((tech) => (
-            <div key={tech.name} className="group relative">
-                <div className={`absolute -inset-0.5 ${tech.color} opacity-20 blur group-hover:opacity-100 transition duration-500 rounded-xl`}></div>
-                <div className="relative px-6 py-3 bg-slate-900 border border-white/10 rounded-xl flex items-center gap-3 transition-colors duration-500 group-hover:bg-slate-800">
-                    <div className={`w-2 h-2 rounded-full ${tech.color}`}></div>
-                    <span className="font-bold text-sm tracking-tight">{tech.name}</span>
+    return (
+        <section className="relative overflow-hidden">
+            {/* Top dark part with label */}
+            <div className="bg-[#020617] pt-12 pb-6">
+                <h2 className="text-2xl font-black text-center text-white tracking-[0.2em] uppercase">
+                    Trust
+                </h2>
+            </div>
+            
+            {/* Bottom light/glass part with icons */}
+            <div className="bg-gray-50/50 backdrop-blur-md py-14 border-y border-gray-100 shadow-inner">
+                <div className="max-w-[1500px] mx-auto px-6 overflow-x-auto no-scrollbar">
+                    <div className="flex items-center justify-center gap-5 min-w-max pb-2">
+                        {techs.map((tech) => (
+                            <div 
+                                key={tech.name} 
+                                className="group flex flex-col items-center justify-between p-6 w-[140px] h-[160px] bg-white/60 backdrop-blur-xl border border-gray-200/50 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 ease-out"
+                            >
+                                <div className="flex-1 flex items-center justify-center w-full">
+                                    <img 
+                                        src={tech.logo} 
+                                        alt={tech.name}
+                                        className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                                <span className="text-[10px] font-black text-gray-900 uppercase tracking-tighter text-center mt-4">
+                                    {tech.name}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+
+            <style jsx>{`
+                .no-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .no-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            `}</style>
+        </section>
+    );
 };
 
 export default Trust;

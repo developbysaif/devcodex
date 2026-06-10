@@ -1,10 +1,21 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import { LayoutGrid } from 'lucide-react';
 
 const Header = () => {
   const navItems = [
-    'Home', 'About', 'Services', 'Technologies', 'Portfolio', 'Process', 'Testimonials', 'Contact'
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Technologies', href: '/technologies' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Team', href: '/team' },
+    { name: 'Process', href: '/process' },
+    { name: 'Why Choose Us', href: '/why-choose-us' },
+    { name: 'Testimonials', href: '/testimonials' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -21,14 +32,13 @@ const Header = () => {
         {/* Navigation */}
         <ul className="hidden lg:flex items-center gap-6 text-[13px] font-medium text-gray-300">
           {navItems.map((item) => (
-            <li key={item}>
-              <a href={`#${item.toLowerCase()}`} className="hover:text-white transition-colors">
-                {item}
-              </a>
+            <li key={item.name}>
+              <Link href={item.href} className="hover:text-white transition-colors">
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
-
         {/* CTA Button */}
         <a href="#contact" className="btn-gradient px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap shadow-md inline-block">
           Book Consultation

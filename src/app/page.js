@@ -19,11 +19,11 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
+      <Trust />
       <About />
       <Services />
       <FeaturedSolutions />
       <TechStack />
-      <Trust />
       <Portfolio />
       <Timeline />
       <WhyChooseUs />
