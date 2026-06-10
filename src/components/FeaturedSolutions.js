@@ -25,7 +25,7 @@ const FeaturedSolutions = () => {
       <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-40 transform -translate-y-1/2 -rotate-2 scale-110" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-24 tracking-tight">
+        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-24 tracking-tight text-white">
           Featured Solutions
         </h2>
 
@@ -36,7 +36,7 @@ const FeaturedSolutions = () => {
                 {/* Glow effect under the image */}
                 <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-blue-600/20 to-transparent blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 
-                <div className="relative h-64 md:h-72 lg:h-80 w-full max-w-sm mx-auto">
+                <div className="relative h-64 md:h-72 lg:h-80 w-80 md:w-96 mx-auto">
                     <Image 
                         src={sol.image} 
                         alt={sol.title} 

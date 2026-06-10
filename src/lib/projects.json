@@ -1,0 +1,37 @@
+[
+    { 
+        "title": "Modern Agency", 
+        "category": "Websites", 
+        "image": "/hero-viz.png",
+        "images": ["/hero-viz.png"],
+        "liveLink": "https://devcodex.com"
+    },
+    { 
+        "title": "SaaS Dashboard", 
+        "category": "Web Applications", 
+        "image": "/solution-business.png",
+        "images": ["/solution-business.png"],
+        "liveLink": ""
+    },
+    { 
+        "title": "Revamp Project", 
+        "category": "Websites", 
+        "image": "/before-after.png",
+        "images": ["/before-after.png"],
+        "liveLink": ""
+    },
+    { 
+        "title": "Global Cart", 
+        "category": "E-Commerce Stores", 
+        "image": "/solution-ecommerce.png",
+        "images": ["/solution-ecommerce.png"],
+        "liveLink": "https://devcodex.com/shop"
+    },
+    { 
+        "title": "Cloud Hub", 
+        "category": "Web Applications", 
+        "image": "/solution-cloud.png",
+        "images": ["/solution-cloud.png"],
+        "liveLink": ""
+    }
+]

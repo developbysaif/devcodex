@@ -6,32 +6,32 @@ const services = [
   {
     title: 'Website Development',
     description: 'We build high-performance, responsive websites tailored to your business needs, ensuring a seamless user experience.',
-    icon: <Monitor className="w-12 h-12 text-blue-600" />
+    icon: <Monitor className="w-12 h-12 text-black" />
   },
   {
     title: 'E-Commerce Development',
     description: 'Specializing in robust e-commerce solutions that drive sales and provide a secure shopping experience for your customers.',
-    icon: <ShoppingCart className="w-12 h-12 text-blue-600" />
+    icon: <ShoppingCart className="w-12 h-12 text-black" />
   },
   {
     title: 'Web Applications',
     description: 'Developing custom web applications with complex functionalities to streamline your business processes.',
-    icon: <Layout className="w-12 h-12 text-blue-600" />
+    icon: <Layout className="w-12 h-12 text-black" />
   },
   {
     title: 'Mobile Applications',
     description: 'Creating intuitive and powerful mobile apps for iOS and Android platforms to reach your audience anywhere.',
-    icon: <Smartphone className="w-12 h-12 text-blue-600" />
+    icon: <Smartphone className="w-12 h-12 text-black" />
   },
   {
     title: 'Graphic Designing',
     description: 'Impactful visual designs that communicate your brand identity and capture your audience\'s attention.',
-    icon: <Palette className="w-12 h-12 text-blue-600" />
+    icon: <Palette className="w-12 h-12 text-black" />
   },
   {
     title: 'Digital Marketing',
     description: 'Data-driven marketing strategies to increase your online presence and grow your business through various channels.',
-    icon: <Rocket className="w-12 h-12 text-blue-600" />
+    icon: <Rocket className="w-12 h-12 text-black" />
   }
 ];
 
@@ -45,9 +45,9 @@ const Services = () => {
           {services.map((service) => (
             <div 
               key={service.title} 
-              className="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl hover:border-blue-100 group"
+              className="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl hover:border-slate-200 group"
             >
-              <div className="mb-6 p-5 rounded-2xl bg-blue-50 group-hover:bg-blue-600 transition-colors duration-500">
+              <div className="mb-6 p-5 rounded-2xl bg-slate-50 group-hover:bg-black transition-colors duration-500">
                 <div className="group-hover:text-white transition-colors duration-500">
                   {service.icon}
                 </div>
@@ -56,9 +56,9 @@ const Services = () => {
               <p className="text-slate-500 text-sm leading-relaxed mb-8">
                 {service.description}
               </p>
-              <button className="mt-auto font-bold text-slate-400 group-hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition-all text-sm uppercase tracking-wider">
+              <a href="#contact" className="mt-auto font-bold text-slate-400 group-hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition-all text-sm uppercase tracking-wider">
                 Learn More
-              </button>
+              </a>
             </div>
           ))}
         </div>

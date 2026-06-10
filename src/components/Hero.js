@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image - Enhanced for prominence */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -34,12 +34,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <button className="btn-gradient px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:scale-105 transition-transform">
+            <a href="#contact" className="btn-gradient px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:scale-105 transition-transform inline-block">
               Start Your Project
-            </button>
-            <button className="px-8 py-4 rounded-2xl font-bold text-lg border border-white/20 hover:bg-white/5 transition-all">
+            </a>
+            <a href="#portfolio" className="px-8 py-4 rounded-2xl font-bold text-lg border border-white/20 hover:bg-white/5 transition-all inline-block">
               View Portfolio
-            </button>
+            </a>
           </div>
         </div>
       </div>

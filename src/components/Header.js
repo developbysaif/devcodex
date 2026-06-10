@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import Link from 'next/link';
 import { LayoutGrid } from 'lucide-react';
 
 const Header = () => {
@@ -23,17 +22,17 @@ const Header = () => {
         <ul className="hidden lg:flex items-center gap-6 text-[13px] font-medium text-gray-300">
           {navItems.map((item) => (
             <li key={item}>
-              <Link href={`#${item.toLowerCase()}`} className="hover:text-white transition-colors">
+              <a href={`#${item.toLowerCase()}`} className="hover:text-white transition-colors">
                 {item}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
 
         {/* CTA Button */}
-        <button className="btn-gradient px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap shadow-md">
-          Get Free Consultation
-        </button>
+        <a href="#contact" className="btn-gradient px-5 py-2 rounded-xl text-xs font-semibold whitespace-nowrap shadow-md inline-block">
+          Book Consultation
+        </a>
       </nav>
     </header>
   );

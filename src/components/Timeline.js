@@ -13,10 +13,12 @@ const steps = [
 
 const Timeline = () => {
   return (
-    <section id="process" className="py-24 bg-white overflow-hidden">
+    <section id="process" className="py-24 relative overflow-hidden" style={{ 
+      background: 'linear-gradient(135deg, #f8fafc 0%, #e0e7ff 25%, #f3e8ff 50%, #fae8ff 75%, #f8fafc 100%)'
+    }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-24">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">Timeline</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-black">Timeline</h2>
           <p className="text-slate-400 font-medium tracking-widest uppercase text-sm">Empowering the Best Ideas</p>
         </div>
 

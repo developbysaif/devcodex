@@ -40,15 +40,15 @@ const techCategories = [
   {
     title: 'Marketing',
     items: [
-      { name: 'SEO', icon: 'https://www.svgrepo.com/show/303154/google-ads-logo.svg' },
-      { name: 'Analytics', icon: 'https://www.svgrepo.com/show/353784/google-analytics.svg' }
+      { name: 'SEO', icon: 'https://cdn.simpleicons.org/googlesearchconsole/4587f1' },
+      { name: 'Analytics', icon: 'https://cdn.simpleicons.org/googleanalytics/41AB5F' }
     ]
   }
 ];
 
 const TechStack = () => {
   return (
-    <section id="tech-stack" className="py-24 bg-[#f1f5f9] text-[#1e293b]">
+    <section id="technologies" className="py-24 bg-[#f1f5f9] text-[#1e293b]">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl lg:text-5xl font-bold text-center mb-20">
           Categorized Technology Stack
