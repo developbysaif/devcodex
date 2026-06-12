@@ -33,17 +33,17 @@ const Header = () => {
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
-      <nav className="glass-nav flex items-center justify-between w-full max-w-7xl px-6 py-2 rounded-2xl shadow-xl">
+      <nav className="glass-nav flex items-center justify-between w-full max-w-7xl px-6 py-3 rounded-2xl shadow-xl">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center font-bold text-xl shadow-lg group-hover:rotate-12 transition-all">
-            <LayoutGrid className="w-5 h-5 text-white" />
+          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center font-bold text-xl shadow-lg group-hover:rotate-12 transition-all">
+            <LayoutGrid className="w-6 h-6 text-white" />
           </div>
-          <span className="font-bold text-lg tracking-tight hidden sm:block">DEVCODEX</span>
+          <span className="font-bold text-xl tracking-tight hidden sm:block">DEVCODEX</span>
         </Link>
 
         {/* Navigation */}
-        <ul className="hidden lg:flex items-center gap-4 xl:gap-6 text-[12px] xl:text-[13px] font-medium text-gray-300">
+        <ul className="hidden lg:flex items-center gap-4 xl:gap-8 text-sm xl:text-base font-medium text-gray-300">
           {navItems.map((item) => (
             <li 
               key={item.name} 

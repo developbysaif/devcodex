@@ -18,7 +18,7 @@ const techs = [
 
 const Trust = () => {
     return (
-        <section className="relative w-full overflow-hidden -mt-48 z-20">
+        <section className="relative w-full overflow-hidden -mt-32 z-20">
             {/* Icons Section - No Background (Transparent) */}
             <div className="py-12 relative">
                 <div className="relative overflow-hidden group">
