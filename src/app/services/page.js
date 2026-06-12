@@ -9,7 +9,7 @@ const detailedServices = [
     header: "Professional Websites That Convert Visitors Into Customers",
     description: "We develop responsive, fast, secure, and SEO-friendly websites tailored to your business objectives.",
     icon: <Monitor className="w-8 h-8" />,
-    image: "/hero-viz.png",
+    image: "/web-dev.png",
     features: ["Responsive Design", "Mobile-Friendly Layout", "SEO Optimization", "Contact Forms", "Speed Optimization", "CMS Integration", "Blog Functionality", "Security Enhancements", "Google Analytics Integration", "Ongoing Maintenance"],
     color: "blue"
   },
@@ -39,7 +39,7 @@ const detailedServices = [
     header: "Android & iOS App Solutions",
     description: "Build powerful mobile applications that deliver exceptional user experiences across devices.",
     icon: <Smartphone className="w-8 h-8" />,
-    image: "/cta.png",
+    image: "/mobile-app.png",
     features: ["Android Applications", "iOS Applications", "Hybrid Applications", "Business Applications", "Educational Apps", "E-Commerce Apps", "Custom Mobile Solutions"],
     color: "pink"
   },
@@ -59,7 +59,7 @@ const detailedServices = [
     header: "Creating Visual Identities That Inspire",
     description: "Our creative team designs professional branding materials that leave lasting impressions.",
     icon: <Palette className="w-8 h-8" />,
-    image: "/team-about.png",
+    image: "/graphic.png",
     features: ["Logo Design", "Brand Identity", "Social Media Posts", "Marketing Materials", "Brochures", "Flyers", "Banners", "Packaging Design", "UI/UX Design"],
     color: "rose"
   },
@@ -69,7 +69,7 @@ const detailedServices = [
     header: "Driving Traffic, Leads & Sales",
     description: "We help businesses reach their target audience and maximize online growth.",
     icon: <Rocket className="w-8 h-8" />,
-    image: "/before-after.png",
+    image: "/hero-viz.png",
     features: ["Social Media Marketing", "Search Engine Optimization (SEO)", "Google Ads", "Facebook Ads", "Instagram Marketing", "LinkedIn Marketing", "Content Marketing", "Lead Generation", "Conversion Optimization"],
     color: "orange"
   }
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                 )}
               </div>
               
-              <div className={`relative aspect-video lg:aspect-square rounded-[40px] overflow-hidden bg-slate-100 border border-slate-200 group ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div className={`relative aspect-video lg:aspect-[4/5] rounded-[40px] overflow-hidden bg-[#0a0f1e] border border-white/5 group ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                  <Image 
                    src={service.image} 
                    alt={service.title} 
@@ -145,7 +145,6 @@ export default function ServicesPage() {
                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                  />
-                 <div className={`absolute inset-0 bg-gradient-to-br ${colors.from} to-transparent opacity-30`} />
               </div>
             </section>
           );

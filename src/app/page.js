@@ -8,7 +8,6 @@ import Portfolio from "@/components/Portfolio";
 import Team from "@/components/Team";
 import Timeline from "@/components/Timeline";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import CTASection from "@/components/CTASection";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -31,7 +30,6 @@ export default function Home() {
       <Team />
       <Timeline />
       <WhyChooseUs />
-      <CTASection />
       <Testimonials />
       <FAQ />
       <Contact />

@@ -24,10 +24,7 @@ const Header = () => {
     },
     { name: 'Technologies', href: '/technologies' },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Team', href: '/team' },
     { name: 'Process', href: '/process' },
-    { name: 'Why Us', href: '/why-choose-us' },
-    { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
   ];
 
