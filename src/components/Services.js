@@ -35,11 +35,13 @@ const services = [
   }
 ];
 
-const Services = () => {
+const Services = ({ hideTitle = false }) => {
   return (
     <section id="services" className="py-24 bg-[#f8fafc] text-[#1e293b]">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 tracking-tight">Services</h2>
+        {!hideTitle && (
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 tracking-tight">Services</h2>
+        )}
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
@@ -49,14 +51,14 @@ const Services = () => {
             >
               <div className="mb-6 p-5 rounded-2xl bg-slate-50 group-hover:bg-black transition-colors duration-500">
                 <div className="group-hover:text-white transition-colors duration-500">
-                  {service.icon}
+                   {service.icon}
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-8">
                 {service.description}
               </p>
-              <a href="#contact" className="mt-auto font-bold text-slate-400 group-hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition-all text-sm uppercase tracking-wider">
+              <a href="/services" className="mt-auto font-bold text-slate-400 group-hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition-all text-sm uppercase tracking-wider">
                 Learn More
               </a>
             </div>

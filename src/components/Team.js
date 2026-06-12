@@ -22,41 +22,41 @@ const Twitter = ({ size = 24 }) => (
 const teamMembers = [
   {
     name: 'M. Rayyan',
-    role: 'Co-Founder & CEO',
+    role: 'Founder & Lead Software Engineer',
     image: '/team-about.png',
-    skills: 'Expert in full-stack development, project management, and digital strategy.',
+    skills: 'M. Rayyan specializes in full-stack development, system architecture, cloud infrastructure, and digital transformation solutions. His expertise helps businesses build scalable and future-ready technology platforms.',
     socials: [<Facebook key="fb" />, <Linkedin key="li" />, <Instagram key="ig" />]
   },
   {
     name: 'Syed Qamar Abbas',
-    role: 'Lead Developer',
+    role: 'Creative Director & Digital Marketing Strategist',
     image: '/team-about.png',
-    skills: 'Specializing in scalable architecture, cloud computing, and backend optimization.',
+    skills: 'Syed Qamar Abbas leads branding, graphic design, social media marketing, and business growth strategies. His creative vision helps brands establish strong market presence and engagement.',
     socials: [<Github key="gh" />, <Linkedin key="li" />, <Twitter key="tw" />]
   },
   {
     name: 'M. Saif Kaleem',
-    role: 'UI/UX Designer',
+    role: 'Senior Web & Application Developer',
     image: '/team-about.png',
-    skills: 'Creative designer focused on premium aesthetics, user experience, and branding.',
+    skills: 'M. Saif Kaleem focuses on modern web technologies, application development, user experience optimization, and performance-focused digital solutions.',
     socials: [<Linkedin key="li" />, <Instagram key="ig" />, <Twitter key="tw" />]
   }
 ];
 
 const Team = () => {
   return (
-    <section id="team" className="py-24 bg-[#020617] relative overflow-hidden">
+    <section id="team" className="py-24 bg-[#f8fafc] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-24 tracking-tight">Team</h2>
+        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-24 tracking-tight text-slate-900">Our Team</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-8">
           {teamMembers.map((member, idx) => (
             <div key={member.name} className="relative pt-16">
               {/* Card Container */}
-              <div className="glass-nav p-8 pt-20 rounded-[40px] text-center border border-white/10 hover:border-white/20 transition-all duration-500 group">
+              <div className="bg-white p-8 pt-20 rounded-[40px] text-center border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group">
                 {/* Circular Profile Image (Overlapping top) */}
                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 shadow-2xl z-10 group-hover:scale-110 transition-transform duration-500">
-                  <div className="w-full h-full rounded-full overflow-hidden bg-slate-800 border-4 border-[#020617]">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-white border-4 border-[#fff]">
                     <Image 
                       src={member.image} 
                       alt={member.name} 
@@ -71,13 +71,13 @@ const Team = () => {
                 </div>
 
                 {/* Member Info */}
-                <h3 className="text-2xl font-bold mb-1">{member.name}</h3>
-                <p className="text-gray-400 text-sm mb-6">{member.role}</p>
+                <h3 className="text-2xl font-bold mb-1 text-slate-900">{member.name}</h3>
+                <p className="text-slate-500 text-sm mb-6">{member.role}</p>
 
                 {/* Social Icons */}
                 <div className="flex justify-center gap-4 mb-8">
                   {member.socials.map((icon, i) => (
-                    <div key={i} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 transition-all duration-300 cursor-pointer text-gray-400 hover:text-white">
+                    <div key={i} className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center hover:bg-black transition-all duration-300 cursor-pointer text-slate-400 hover:text-white">
                       {React.cloneElement(icon, { size: 18 })}
                     </div>
                   ))}
@@ -85,8 +85,8 @@ const Team = () => {
 
                 {/* Skills Section */}
                 <div className="text-left">
-                  <h4 className="font-bold text-lg mb-3">Skills</h4>
-                  <p className="text-gray-400 text-sm italic leading-relaxed">
+                  <h4 className="font-bold text-lg mb-3 text-slate-800">Skills</h4>
+                  <p className="text-slate-500 text-sm italic leading-relaxed">
                     {member.skills}
                   </p>
                 </div>

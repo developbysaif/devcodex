@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Target, Eye, Heart } from 'lucide-react';
 
-const About = () => {
+const About = ({ hideTitle = false }) => {
   const items = [
     {
       title: 'Mission',
@@ -25,7 +25,9 @@ const About = () => {
   return (
     <section id="about" className="py-32 bg-[#020617] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-20 tracking-tight">About</h2>
+        {!hideTitle && (
+          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-20 tracking-tight">About</h2>
+        )}
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column: Team Image with Gradient Box */}
@@ -54,28 +56,53 @@ const About = () => {
           {/* Right Column: Text and Cards */}
           <div className="space-y-12">
             <div>
-              <h3 className="text-3xl lg:text-4xl font-bold mb-6">Who We Are</h3>
+              <h3 className="text-3xl lg:text-4xl font-bold mb-6">About DevCodeX</h3>
               <p className="text-gray-400 text-lg leading-relaxed">
-                At DevCodex, we are a team of passionate innovators dedicated to bridging the gap between complex ideas and powerful digital outcomes. 
+                DevCodeX is a modern digital solutions company dedicated to helping businesses succeed in today&#39;s competitive digital landscape. We specialize in creating high-performance websites, e-commerce stores, custom web applications, mobile applications, cloud-based infrastructures, graphic design solutions, and digital marketing strategies.
+              </p>
+              <p className="text-gray-400 text-lg leading-relaxed mt-4">
+                Our mission is simple: to empower businesses with technology that increases efficiency, strengthens brand presence, and drives growth.
               </p>
             </div>
 
-            <div className="space-y-6">
-              {items.map((item) => (
-                <div key={item.title} className="glass-nav p-6 rounded-2xl border border-white/5 hover:border-white/20 transition-all group">
-                  <div className="flex gap-6 items-start">
-                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                      <p className="text-gray-400 leading-relaxed text-sm">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="glass-nav p-6 rounded-2xl border border-white/5 hover:border-white/20 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4">
+                  <Target className="w-6 h-6 text-blue-500" />
                 </div>
-              ))}
+                <h4 className="text-xl font-bold mb-2">Our Mission</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  To provide innovative, reliable, and scalable digital solutions that help businesses establish a strong online presence, streamline operations, and achieve sustainable growth through technology and creativity.
+                </p>
+              </div>
+              <div className="glass-nav p-6 rounded-2xl border border-white/5 hover:border-white/20 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4">
+                  <Eye className="w-6 h-6 text-purple-500" />
+                </div>
+                <h4 className="text-xl font-bold mb-2">Our Vision</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  To become a leading technology and digital solutions company recognized globally for delivering exceptional innovation, customer satisfaction, and transformative digital experiences.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-2xl font-bold">Our Core Values</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  { title: "Innovation", desc: "We continuously explore new technologies and creative approaches." },
+                  { title: "Excellence", desc: "We maintain high standards in every project." },
+                  { title: "Integrity", desc: "We build long-term relationships through honesty and trust." },
+                  { title: "Client Success", desc: "Our success is measured by the success of our clients." },
+                  { title: "Collaboration", desc: "Great solutions are created through teamwork." },
+                  { title: "Continuous Learning", desc: "We are committed to staying ahead of industry trends." }
+                ].map((val) => (
+                  <div key={val.title} className="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <h5 className="font-bold text-white mb-1">{val.title}</h5>
+                    <p className="text-xs text-gray-400">{val.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

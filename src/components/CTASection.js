@@ -32,6 +32,7 @@ export default function CTASection() {
                 src="/cta.png"
                 alt="Cloud Tech"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                 className="object-contain"
                 priority
               />

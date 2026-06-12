@@ -31,43 +31,42 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#020617] text-white pt-20 pb-10 border-t border-white/5">
+    <footer className="bg-[#0f172a] text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Quick Links */}
           <div>
             <h4 className="text-xl font-bold mb-8 tracking-tight">Quick Links</h4>
-            <ul className="space-y-4 text-gray-400">
+            <ul className="space-y-4 text-slate-400">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="#about" className="hover:text-white transition-colors">About</Link></li>
-              <li><Link href="#services" className="hover:text-white transition-colors">Services</Link></li>
-              <li><Link href="#portfolio" className="hover:text-white transition-colors">Portfolio</Link></li>
-              <li><Link href="#contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
             <h4 className="text-xl font-bold mb-8 tracking-tight">Services</h4>
-            <ul className="space-y-4 text-gray-400">
-              <li>Website Development</li>
-              <li>E-Commerce Stores</li>
-              <li>Mobile Applications</li>
-              <li>Cloud Management</li>
-              <li>Branding & Design</li>
-              <li>Digital Marketing</li>
+            <ul className="space-y-4 text-slate-400">
+              <li><Link href="/services#website" className="hover:text-white transition-colors">Website Development</Link></li>
+              <li><Link href="/services#ecommerce" className="hover:text-white transition-colors">E-Commerce Stores</Link></li>
+              <li><Link href="/services#webapp" className="hover:text-white transition-colors">Web Applications</Link></li>
+              <li><Link href="/services#mobile" className="hover:text-white transition-colors">Mobile Applications</Link></li>
+              <li><Link href="/services#cloud" className="hover:text-white transition-colors">Cloud Management</Link></li>
+              <li><Link href="/services#marketing" className="hover:text-white transition-colors">Digital Marketing</Link></li>
             </ul>
           </div>
 
-          {/* Business Hours / Extra */}
+          {/* Business Hours */}
           <div>
-            <h4 className="text-xl font-bold mb-8 tracking-tight">Business</h4>
-            <ul className="space-y-4 text-gray-400">
-              <li>Open: 9:00 AM</li>
-              <li>Close: 6:00 PM</li>
-              <li>Monday - Friday</li>
-              <li>Weekend: Closed</li>
-              <li>Support: 24/7</li>
+            <h4 className="text-xl font-bold mb-8 tracking-tight">Business Hours</h4>
+            <ul className="space-y-4 text-slate-400">
+              <li className="flex justify-between"><span>Mon - Fri:</span> <span>9:00 AM - 6:00 PM</span></li>
+              <li className="flex justify-between"><span>Saturday:</span> <span>Closed</span></li>
+              <li className="flex justify-between"><span>Sunday:</span> <span>Closed</span></li>
+              <li className="pt-4 border-t border-white/5 font-bold text-white text-sm tracking-widest uppercase">Support: 24/7</li>
             </ul>
           </div>
 
@@ -76,18 +75,21 @@ const Footer = () => {
             <h4 className="text-xl font-bold mb-8 tracking-tight">Social Media</h4>
             <div className="flex flex-wrap gap-4">
               {socials.map((social, i) => (
-                <div key={i} className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 group cursor-pointer text-gray-500 hover:text-white">
+                <div key={i} className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 group cursor-pointer text-slate-400 hover:text-white shadow-lg">
                     {React.cloneElement(social.icon, { size: 20 })}
                 </div>
               ))}
+            </div>
+            <div className="mt-10">
+               <div className="text-4xl font-black italic tracking-tighter opacity-10">DEVCODEX</div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-10 text-center">
-            <p className="text-gray-500 text-sm font-medium tracking-widest">
-                © {new Date().getFullYear()} DevCodex. All Rights Reserved.
+            <p className="text-slate-500 text-[10px] font-bold tracking-[0.2em] uppercase">
+                © {new Date().getFullYear()} DevCodex. Designed with precision for global impact.
             </p>
         </div>
       </div>

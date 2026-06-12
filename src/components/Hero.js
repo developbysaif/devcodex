@@ -24,13 +24,13 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full pt-2 pb-16">
         <div className="max-w-2xl space-y-6">
           <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-            Transforming <span className="text-gradient">Ideas</span>
+            Transforming <span className="text-gradient">Ideas</span>{" "}
             Into Powerful
             Digital Solutions
           </h1>
 
-          <p className="text-base text-gray-300 max-w-md leading-relaxed">
-            We build modern websites, scalable applications, cloud solutions, and digital marketing systems that help businesses grow faster.
+          <p className="text-base text-gray-300 max-w-xl leading-relaxed">
+            DevCodeX is a full-service digital agency helping businesses establish, grow, and scale their online presence through innovative websites, e-commerce solutions, custom applications, cloud infrastructure, creative design, and data-driven digital marketing.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">

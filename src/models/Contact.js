@@ -5,6 +5,9 @@ const ContactSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please provide a name.'],
   },
+  company: {
+    type: String,
+  },
   email: {
     type: String,
     required: [true, 'Please provide an email.'],
@@ -16,6 +19,9 @@ const ContactSchema = new mongoose.Schema({
   service: {
     type: String,
     required: [true, 'Please select a service.'],
+  },
+  budget: {
+    type: String,
   },
   message: {
     type: String,

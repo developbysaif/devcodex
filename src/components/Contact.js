@@ -33,9 +33,11 @@ const contactInfo = [
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
+    company: "",
     email: "",
     phone: "",
     service: "",
+    budget: "",
     message: "",
   });
 
@@ -74,9 +76,11 @@ const Contact = () => {
 
         setFormData({
           name: "",
+          company: "",
           email: "",
           phone: "",
           service: "",
+          budget: "",
           message: "",
         });
       } else {
@@ -105,48 +109,62 @@ const Contact = () => {
         {/* Heading */}
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
-            Contact Us
+            Let&#39;s Build Something Amazing Together
           </h2>
           <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss your ideas and create
-            something amazing together.
+            Whether you&#39;re launching a startup, scaling an existing business, or transforming your digital presence, DevCodeX is ready to help.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Contact Info */}
           <div className="space-y-10">
-            {contactInfo.map((info) => (
-              <div
-                key={info.label}
-                className="flex items-center gap-6 group"
-              >
-                <div className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-all">
-                  {info.icon}
-                </div>
+            <div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">Contact Information</h3>
+              <div className="space-y-6">
+                {contactInfo.map((info) => (
+                  <div
+                    key={info.label}
+                    className="flex items-center gap-6 group"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:scale-110 transition-all">
+                      {info.icon}
+                    </div>
 
-                <div>
-                  <h4 className="font-bold text-lg text-slate-900">
-                    {info.label}
-                  </h4>
-                  {info.href ? (
-                    <a href={info.href} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">{info.value}</a>
-                  ) : (
-                    <p className="text-slate-500">{info.value}</p>
-                  )}
-                </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-slate-900">
+                        {info.label}
+                      </h4>
+                      {info.href ? (
+                        <a href={info.href} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors uppercase text-sm font-semibold tracking-wide">
+                          {info.value}
+                        </a>
+                      ) : (
+                        <p className="text-slate-500">{info.value}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            
+            <div className="p-8 rounded-3xl bg-gradient-to-br from-blue-600 to-purple-700 text-white shadow-xl">
+              <h4 className="text-xl font-bold mb-4">Ready to turn your ideas into reality?</h4>
+              <p className="text-blue-100 mb-6 leading-relaxed">
+                Contact DevCodeX today and let&#39;s create something extraordinary together.
+              </p>
+              <div className="text-2xl font-black italic tracking-tighter opacity-50">DEVCODEX</div>
+            </div>
           </div>
 
           {/* Form */}
           <div className="bg-white/50 backdrop-blur-xl p-10 rounded-[40px] border border-white shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name & Email */}
+              {/* Name & Company */}
               <div className="grid md:grid-cols-2 gap-6">
                 <input
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Full Name"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -154,10 +172,22 @@ const Contact = () => {
                   required
                   className="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white/70 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+                <input
+                  type="text"
+                  placeholder="Company Name"
+                  value={formData.company}
+                  onChange={(e) =>
+                    setFormData({ ...formData, company: e.target.value })
+                  }
+                  className="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white/70 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
 
+              {/* Email & Phone */}
+              <div className="grid md:grid-cols-2 gap-6">
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Email Address"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -165,13 +195,9 @@ const Contact = () => {
                   required
                   className="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white/70 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-              </div>
-
-              {/* Phone & Service */}
-              <div className="grid md:grid-cols-2 gap-6">
                 <input
                   type="text"
-                  placeholder="Enter your phone number"
+                  placeholder="Phone Number"
                   value={formData.phone}
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
@@ -179,7 +205,10 @@ const Contact = () => {
                   required
                   className="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white/70 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+              </div>
 
+              {/* Service & Budget */}
+              <div className="grid md:grid-cols-2 gap-6">
                 <select
                   value={formData.service}
                   onChange={(e) =>
@@ -188,24 +217,30 @@ const Contact = () => {
                   required
                   className="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white/70 text-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="">Select a service</option>
-                  <option value="Website Development">
-                    Website Development
-                  </option>
-                  <option value="Mobile App Development">
-                    Mobile App Development
-                  </option>
-                  <option value="UI/UX Design">UI/UX Design</option>
-                  <option value="SEO & Marketing">
-                    SEO & Digital Marketing
-                  </option>
+                  <option value="">Service Required</option>
+                  <option value="Website Development">Website Development</option>
+                  <option value="E-Commerce Solutions">E-Commerce Solutions</option>
+                  <option value="Web Applications">Web Applications</option>
+                  <option value="Mobile Applications">Mobile Applications</option>
+                  <option value="Cloud Solutions">Cloud Solutions</option>
+                  <option value="Graphic Designing">Graphic Designing</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
                 </select>
+                <input
+                  type="text"
+                  placeholder="Project Budget"
+                  value={formData.budget}
+                  onChange={(e) =>
+                    setFormData({ ...formData, budget: e.target.value })
+                  }
+                  className="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white/70 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
               </div>
 
               {/* Message */}
               <textarea
-                rows="5"
-                placeholder="Tell us about your project..."
+                rows="4"
+                placeholder="Message"
                 value={formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
