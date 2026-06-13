@@ -3,9 +3,19 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { LayoutGrid, ChevronDown } from 'lucide-react';
+import { useEffect } from 'react';
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -30,8 +40,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
-      <nav className="glass-nav flex items-center justify-between w-full max-w-7xl px-6 py-3 rounded-2xl shadow-xl">
+    <header className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-300 ${isScrolled ? 'top-0 px-0' : 'top-4 px-4'}`}>
+      <nav className={`glass-nav flex items-center justify-between w-full transition-all duration-300 ${isScrolled ? 'max-w-full rounded-none px-10 py-4 bg-black/80' : 'max-w-7xl rounded-2xl px-6 py-3 shadow-xl'}`}>
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <Image 
