@@ -41,7 +41,7 @@ const Header = () => {
             height={58} 
             className="w-12 h-auto group-hover:scale-110 transition-transform"
           />
-          <span className="font-bold text-xl tracking-tight hidden sm:block">DEVCODEX</span>
+          <span className="font-bold text-xl tracking-tight hidden sm:block"></span>
         </Link>
 
         {/* Navigation */}
