@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { LayoutGrid, ChevronDown } from 'lucide-react';
 
 const Header = () => {
@@ -33,9 +34,13 @@ const Header = () => {
       <nav className="glass-nav flex items-center justify-between w-full max-w-7xl px-6 py-3 rounded-2xl shadow-xl">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center font-bold text-xl shadow-lg group-hover:rotate-12 transition-all">
-            <LayoutGrid className="w-6 h-6 text-white" />
-          </div>
+          <Image 
+            src="/dev-logo.png" 
+            alt="DevCodex Logo" 
+            width={40} 
+            height={40} 
+            className="w-10 h-auto group-hover:scale-110 transition-transform"
+          />
           <span className="font-bold text-xl tracking-tight hidden sm:block">DEVCODEX</span>
         </Link>
 

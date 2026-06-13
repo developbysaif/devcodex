@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
 
 // Custom Lucide-styled brand icons as the library removed them in latest versions
@@ -81,7 +82,13 @@ const Footer = () => {
               ))}
             </div>
             <div className="mt-10">
-               <div className="text-4xl font-black italic tracking-tighter opacity-10">DEVCODEX</div>
+               <Image 
+                 src="/dev-logo.png" 
+                 alt="DevCodex Logo" 
+                 width={120} 
+                 height={40} 
+                 className="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity"
+               />
             </div>
           </div>
         </div>
