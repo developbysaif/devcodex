@@ -85,9 +85,9 @@ const Footer = () => {
                <Image 
                  src="/dev-logo.png" 
                  alt="DevCodex Logo" 
-                 width={120} 
-                 height={40} 
-                 className="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity"
+                 width={180} 
+                 height={60} 
+                 className="h-16 w-auto opacity-50 hover:opacity-100 transition-opacity"
                />
             </div>
           </div>

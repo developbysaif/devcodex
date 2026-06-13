@@ -37,9 +37,9 @@ const Header = () => {
           <Image 
             src="/dev-logo.png" 
             alt="DevCodex Logo" 
-            width={40} 
-            height={40} 
-            className="w-10 h-auto group-hover:scale-110 transition-transform"
+            width={58} 
+            height={58} 
+            className="w-12 h-auto group-hover:scale-110 transition-transform"
           />
           <span className="font-bold text-xl tracking-tight hidden sm:block">DEVCODEX</span>
         </Link>
