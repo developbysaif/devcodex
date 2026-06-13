@@ -5,7 +5,6 @@ import FeaturedSolutions from "@/components/FeaturedSolutions";
 import TechStack from "@/components/TechStack";
 import Trust from "@/components/Trust";
 import Portfolio from "@/components/Portfolio";
-import Team from "@/components/Team";
 import Timeline from "@/components/Timeline";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
@@ -27,7 +26,6 @@ export default function Home() {
       <FeaturedSolutions />
       <TechStack />
       <Portfolio />
-      <Team />
       <Timeline />
       <WhyChooseUs />
       <Testimonials />
