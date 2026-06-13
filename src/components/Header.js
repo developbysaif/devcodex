@@ -20,8 +20,8 @@ const Header = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { 
-      name: 'Services', 
+    {
+      name: 'Services',
       href: '/services',
       subItems: [
         { name: 'Website Development', href: '/services#website' },
@@ -44,11 +44,11 @@ const Header = () => {
       <nav className={`glass-nav flex items-center justify-between w-full transition-all duration-300 ${isScrolled ? 'max-w-full rounded-none px-10 py-4 bg-black/80' : 'max-w-7xl rounded-2xl px-6 py-3 shadow-xl'}`}>
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <Image 
-            src="/dev-logo.png" 
-            alt="DevCodex Logo" 
-            width={58} 
-            height={58} 
+          <Image
+            src="/dev-logo.png"
+            alt="DevCodex Logo"
+            width={58}
+            height={58}
             className="w-12 h-auto group-hover:scale-110 transition-transform"
           />
           <span className="font-bold text-xl tracking-tight hidden sm:block"></span>
@@ -57,14 +57,14 @@ const Header = () => {
         {/* Navigation */}
         <ul className="hidden lg:flex items-center gap-4 xl:gap-8 text-sm xl:text-base font-medium text-gray-300">
           {navItems.map((item) => (
-            <li 
-              key={item.name} 
+            <li
+              key={item.name}
               className="relative group py-2"
               onMouseEnter={() => item.subItems && setActiveDropdown(item.name)}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <Link 
-                href={item.href} 
+              <Link
+                href={item.href}
                 className={`hover:text-white transition-colors flex items-center gap-1 ${activeDropdown === item.name ? 'text-white' : ''}`}
               >
                 {item.name}
@@ -75,8 +75,8 @@ const Header = () => {
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-64 bg-[#0f172a] border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="grid grid-cols-1 p-2">
                     {item.subItems.map((sub) => (
-                      <Link 
-                        key={sub.name} 
+                      <Link
+                        key={sub.name}
                         href={sub.href}
                         className="px-4 py-3 text-xs text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all"
                       >
